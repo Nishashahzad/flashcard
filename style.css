@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgb(223, 248, 248);
+}
+
+.container {
+    width: 90vw;
+    height: 12vh;
+    border: 1px solid transparent;
+    position: relative;
+    margin: auto;
+}
+
+.add-flashcard-con {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 30px;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.add-flashcard-con button {
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(116, 212, 212);
+    padding: 10px 15px;
+}
+
+#card-con {
+    border: 1px solid transparent;
+    margin-top: 1em;
+}
+
+.question-container {
+    width: 90vw;
+    max-width: 34em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 3rem 2rem;
+    border-radius: 0.6em;
+    box-shadow: 0 1em 2em rgba(28, 0, 80, 0.1);
+}
+
+.question-container h2 {
+    font-size: 25px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 11fr 11fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.error-con {
+    align-self: center;
+}
+
+#error {
+    color: red;
+    font-weight: 600;
+}
+
+.fa-xmark {
+    font-size: 1.4em;
+    background-color: rgb(116, 212, 212);
+    height: 1.6em;
+    width: 1.4em;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    padding: 0.5rem;
+}
+#close-btn{
+    margin-left: 200px;
+}
+
+label {
+    color: black;
+    font-weight: 600;
+    margin-bottom: 0.3em;
+}
+
+textarea {
+    width: 100%;
+    padding: 0.7rem 0.5rem;
+    border: 1px solid rgb(223, 215, 215);
+    outline: none;
+    resize: none;
+    border-radius: 0.3em;
+    color: rgb(46, 45, 45);
+}
+
+textarea:not(:last-child) {
+    margin-bottom: 1.2em;
+}
+
+textarea:focus {
+    border-color: rgb(151, 140, 140);
+}
+
+#save-btn {
+    font-size: 1em;
+color: white;
+background-color: rgb(116, 212, 212);
+padding: 0.5rem 0;
+border-radius: 0.3em;
+}
+.card-list-container{
+    display: grid;
+    padding: 1.5em;
+gap: 1.5em;
+grid-template-columns: 1fr 1fr 1fr;
+width: fit-content;
+height: fit-content;
+
+}
+.hide{
+    display: none;
+}
+.card {
+    background-color: #ffffff;
+    box-shadow: 0 0.4em 1.2em rgba(28, 0, 80, 0.08);
+    padding: 1.2em;
+    border-radius: 0.4em;
+  }
+  .question-div, .answer-div{
+    text-align: justify;
+  }
+  .question-div {
+    margin-bottom: 1.5em;
+    font-weight: 500;
+    color: rgb(63, 62, 62);
+  }
+  .answer-div{
+    margin-top: 2em;
+    font-weight: 400;
+    color: rgb(63, 62, 62);
+  }
+ .show-hide-btn{
+    font-size: 20px;
+    font-weight: 500;
+    background-color: rgb(116, 212, 212);
+    padding: 10px 15px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+.buttons-con {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit, .delete{
+    background-color: transparent;
+    padding: 0.9em 0.2rem 0.5em 0.2rem;
+    font-size: 1.2em;
+}
+.delete{
+    color: rgb(241, 54, 21);
+}
+.edit{
+    color: rgb(24, 121, 185);
+}
+
+@media(max-width: 450px){
+body{
+    font-size: 15px;
+}
+.card-list-container{
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+}
+}
+@media(max-width: 800px){
+    .card-list-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8em;
+    }
+}
